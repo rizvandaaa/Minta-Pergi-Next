@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import type { LeafletMouseEvent } from 'leaflet';
 import type LType from 'leaflet';
-
 let L: any;
 if (typeof window !== 'undefined') {
   L = require('leaflet');
@@ -79,7 +79,7 @@ export default function MapClient({
     destinationMarkerRef.current = dMarker;
 
     // Handle map click
-    mapInstance.on('click', (e) => {
+    mapInstance.on('click', (e: LeafletMouseEvent) => {
       const lat = e.latlng.lat;
       const lng = e.latlng.lng;
 
