@@ -166,7 +166,7 @@ export default function MapCalculator({ selectedService }: MapCalculatorProps) {
     message += `Mohon segera dicarikan Driver terdekat. Terima kasih!`;
 
     const encodedText = encodeURIComponent(message);
-    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=6281312292782&text=${encodedText}`;
 
     window.open(whatsappUrl, '_blank');
   };

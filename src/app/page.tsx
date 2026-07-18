@@ -69,6 +69,24 @@ export default function Home() {
     }
   };
 
+  const handleSelectService = (service: 'antar-jemput' | 'jastip') => {
+    setSelectedService(service);
+    
+    setTimeout(() => {
+      const element = document.getElementById('gabung-grup');
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 50);
+  };
+
   return (
     <>
       {/* Navbar / Header */}
@@ -113,14 +131,14 @@ export default function Home() {
           </div>
         </div>
       </header>
-
+ 
       {/* Main Sections */}
       <main>
         <MandalikaHero />
         
         <ServiceCard 
           selectedService={selectedService} 
-          onSelectService={setSelectedService} 
+          onSelectService={handleSelectService} 
         />
         
         {selectedService && (
