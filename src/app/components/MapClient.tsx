@@ -1,7 +1,12 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import L from 'leaflet';
+import type LType from 'leaflet';
+
+let L: any;
+if (typeof window !== 'undefined') {
+  L = require('leaflet');
+}
 
 interface MapClientProps {
   pickup: { lat: number; lng: number };
@@ -19,10 +24,10 @@ export default function MapClient({
   markerMode,
 }: MapClientProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<L.Map | null>(null);
-  const pickupMarkerRef = useRef<L.Marker | null>(null);
-  const destinationMarkerRef = useRef<L.Marker | null>(null);
-  const routeLineRef = useRef<L.Polyline | null>(null);
+  const mapRef = useRef<LType.Map | null>(null);
+  const pickupMarkerRef = useRef<LType.Marker | null>(null);
+  const destinationMarkerRef = useRef<LType.Marker | null>(null);
+  const routeLineRef = useRef<LType.Polyline | null>(null);
 
   // Initialize Map
   useEffect(() => {

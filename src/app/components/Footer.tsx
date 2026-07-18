@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container footer-content">
         <div className="footer-brand">
           <a href="#" className="logo">
-            <img src="/assets/logo.jpg" alt="MINTA.PERGI Logo" className="logo-img" />
+            <img src="/assets/logo.png" alt="MINTA.PERGI Logo" className="logo-img" />
             <span className="logo-text">MINTA.<span className="accent">PERGI</span></span>
           </a>
           <p>Menghubungkan mahasiswa Tasikmalaya dengan mobilitas aman, nyaman, dan ramah kantong.</p>

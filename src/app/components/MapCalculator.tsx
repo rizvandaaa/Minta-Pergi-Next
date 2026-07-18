@@ -282,9 +282,20 @@ export default function MapCalculator({ selectedService }: MapCalculatorProps) {
           </div>
 
           {/* Submit */}
-          <button className="btn btn-gold btn-block btn-lg" onClick={handleOrderWhatsApp}>
-            <i className="fa-brands fa-whatsapp"></i> Pesan Sekarang via WhatsApp
-          </button>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <a 
+              href="https://forms.gle/TKuWvMFkdztGsNt37" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-outline btn-block btn-lg"
+              style={{ borderColor: 'var(--accent-gold)', color: 'var(--accent-gold)' }}
+            >
+              <i className="fa-solid fa-file-signature"></i> 1. Daftar Customer (Wajib Sebelum Order)
+            </a>
+            <button className="btn btn-gold btn-block btn-lg" onClick={handleOrderWhatsApp}>
+              <i className="fa-brands fa-whatsapp"></i> 2. Pesan Sekarang via WhatsApp
+            </button>
+          </div>
         </div>
 
         {/* Map Panel */}

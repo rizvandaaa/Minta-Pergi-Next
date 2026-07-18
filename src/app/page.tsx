@@ -75,7 +75,7 @@ export default function Home() {
       <header className="main-header">
         <div className="container navbar-container">
           <a href="#" className="logo">
-            <img src="/assets/logo.jpg" alt="MINTA.PERGI Logo" className="logo-img" />
+            <img src="/assets/logo.png" alt="MINTA.PERGI Logo" className="logo-img" />
             <span className="logo-text">MINTA.<span className="accent">PERGI</span></span>
           </a>
           
